@@ -1,4 +1,6 @@
 class CompanyNameGenerator < Sinatra::Base
+  register Sinatra::Reloader
+
   get '/' do
     name = Faker::Company.name
     bs = Faker::Company.bs
